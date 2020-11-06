@@ -1,0 +1,33 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/02/Adder16.hdl
+
+/**
+ * Adds two 16-bit values.
+ * The most significant carry bit is ignored.
+ */
+
+CHIP And16way {
+    IN a[16];
+    OUT out;
+
+    PARTS:
+    // Put you code here:
+    Not16(in=a, out[0]=nota0, out[1]=nota1, out[2]=nota2, out[3]=nota3, out[4]=nota4, out[5]=nota5, out[6]=nota6, out[7]=nota7, out[8]=nota8, out[9]=nota9, out[10]=nota10, out[11]=nota11, out[12]=nota12, out[13]=nota13, out[14]=nota14, out[15]=nota15 );
+    And(a=nota0,  b=nota1  , out=b0 );
+    And(a=b0 , b=nota2  , out=b1 );
+    And(a=b1 , b=nota3  , out=b2 );
+    And(a=b2 , b=nota4  , out=b3 );
+    And(a=b3 , b=nota5  , out=b4 );
+    And(a=b4 , b=nota6  , out=b5 );
+    And(a=b5 , b=nota7  , out=b6 );
+    And(a=b6 , b=nota8  , out=b7 );
+    And(a=b7 , b=nota9  , out=b8 );
+    And(a=b8 , b=nota10 , out=b9 );
+    And(a=b9 , b=nota11 , out=b10);
+    And(a=b10, b=nota12 , out=b11);
+    And(a=b11, b=nota13 , out=b12);
+    And(a=b12, b=nota14 , out=b13);
+    And(a=b13, b=nota15 , out=out);
+}

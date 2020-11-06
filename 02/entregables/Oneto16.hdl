@@ -1,0 +1,33 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/02/Adder16.hdl
+
+/**
+ * Adds two 16-bit values.
+ * The most significant carry bit is ignored.
+ */
+
+CHIP Oneto16 {
+    IN a;
+    OUT out[16];
+
+    PARTS:
+   // Put you code here:
+   And(a=true, b=a, out=out[0]);
+   And(a=true, b=a, out=out[1]);
+   And(a=true, b=a, out=out[2]);
+   And(a=true, b=a, out=out[3]);
+   And(a=true, b=a, out=out[4]);
+   And(a=true, b=a, out=out[5]);
+   And(a=true, b=a, out=out[6]);
+   And(a=true, b=a, out=out[7]);
+   And(a=true, b=a, out=out[8]);
+   And(a=true, b=a, out=out[9]);
+   And(a=true, b=a, out=out[10]);
+   And(a=true, b=a, out=out[11]);
+   And(a=true, b=a, out=out[12]);
+   And(a=true, b=a, out=out[13]);
+   And(a=true, b=a, out=out[14]);
+   And(a=true, b=a, out=out[15]);
+}
